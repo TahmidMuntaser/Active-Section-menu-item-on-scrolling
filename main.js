@@ -23,12 +23,20 @@ window.addEventListener("scroll", ()=>{
         const sectionHeight = section.clientHeight;
         // console.log(sectionHeight);
 
-        if(pageYOffset > sectionTop - sectionHeight){
+        if(pageYOffset > sectionTop - sectionHeight/3){
            current = section.getAttribute('id');
-           // it will pick section id 
-           // home contact about 
-           console.log(current);
+            // it will pick section id 
+            // home contact about 
+            //console.log(current);
         }
 
+    })
+
+    navLi.forEach(li =>{
+        li.classList.remove('active'); // it will remove the active class from the li
+        if(li.classList.contains(current)){
+            li.classList.add('active');
+        }
+        
     })
 });
