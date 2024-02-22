@@ -1,1 +1,34 @@
- 
+const sections = document.querySelectorAll('section'); // replace 'section' with your actual selector
+const navLi = document.querySelectorAll('nav .container ul li'); 
+
+// window.addEventListener("scroll", ()=>{
+//     let current = '';  //its not fix, actually its a variable
+//     section.forEach(section =>{
+//         // i need the section top
+//         const sectionTop = section.offsetTop;// it takes the section top 
+//         const abc = section.offsetTop;
+//         console.log(abc);
+//     })
+
+// });
+
+
+window.addEventListener("scroll", ()=>{
+    let current = '';
+    sections.forEach(section =>{
+        const sectionTop = section.offsetTop;
+        // const abc = section.offsetTop;
+        // console.log(abc);
+
+        const sectionHeight = section.clientHeight;
+        // console.log(sectionHeight);
+
+        if(pageYOffset > sectionTop - sectionHeight){
+           current = section.getAttribute('id');
+           // it will pick section id 
+           // home contact about 
+           console.log(current);
+        }
+
+    })
+});
