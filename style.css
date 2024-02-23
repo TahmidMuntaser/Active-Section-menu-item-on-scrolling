@@ -73,6 +73,7 @@ section{
 
 .active{
     background-color: red;
+    transition: .3s all ease background-color;
 }
 
 
