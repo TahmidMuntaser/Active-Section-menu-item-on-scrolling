@@ -76,5 +76,29 @@ section{
     transition: .3s all ease background-color;
 }
 
+.to-top{
+    position: fixed;
+    right: 32px;
+    bottom: 16px;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 32px;
+    pointer-events: none;
+    transition: all 0.5s;
+    opacity: 0; 
+    /* invisible now */
 
+
+}
+
+.to-top.active{
+    opacity: 1;
+    pointer-events: auto;
+}
 
